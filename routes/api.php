@@ -28,7 +28,7 @@ Route::post('/login', [App\Http\Controllers\LoginController::class, 'login' ])->
 
 
 
-});//fim grupo
+});//fim grupo.
 
 
 Route::group(['middleware'=>'auth:api'],function(){
