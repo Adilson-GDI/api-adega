@@ -20,7 +20,7 @@ Route::group(['middleware'=> ['guest:api']], function () {
 
 Route::get('/', function()
 {
-    return "ola";
+    return "ola...";
 });
 
 Route::post('/login', [App\Http\Controllers\AuthControlle::class, 'login' ]);
