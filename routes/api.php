@@ -23,6 +23,8 @@ Route::get('/', function()
     return "ola";
 });
 
+Route::get('/produto', [App\Http\Controllers\ProdutoController::class, 'list'])->name('list');
+
 Route::post('/login', [App\Http\Controllers\LoginController::class, 'login' ])->name('login');
 
 //Route::get('/cliente', [App\Http\Controllers\ClienteController::class, 'index'])->name('home');
