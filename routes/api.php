@@ -20,10 +20,10 @@ Route::group(['middleware'=> ['guest:api']], function () {
 
 Route::get('/', function()
 {
-    return "ola...";
+    return "ola";
 });
 
-Route::post('/login', [App\Http\Controllers\AuthControlle::class, 'login' ]);
+Route::post('/login', [App\Http\Controllers\LoginController::class, 'login' ])->name('login');;
 //Route::get('/cliente', [App\Http\Controllers\ClienteController::class, 'index'])->name('home');
 
 
