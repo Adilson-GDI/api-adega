@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,7 +23,7 @@ Route::get('/', function()
     return "ola";
 });
 
-Route::post('login', [App\Http\Controllers\LoginController::class, 'login' ]);
+Route::post('/login', [App\Http\Controllers\LoginController::class, 'login' ]);
 //Route::get('/cliente', [App\Http\Controllers\ClienteController::class, 'index'])->name('home');
 
 
