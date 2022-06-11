@@ -23,7 +23,8 @@ Route::get('/', function()
     return "ola";
 });
 
-Route::post('/login', [App\Http\Controllers\LoginController::class, 'login' ])->name('login');;
+Route::post('/login', [App\Http\Controllers\LoginController::class, 'login' ])->name('login');
+
 //Route::get('/cliente', [App\Http\Controllers\ClienteController::class, 'index'])->name('home');
 
 
