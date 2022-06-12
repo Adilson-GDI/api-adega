@@ -21,9 +21,9 @@ class LoginController extends Controller
   
       $validator = $this->validation($request);
 
-        if ($validator->fails()) {
+       /*  if ($validator->fails()) {
             return $this->response('Os dados informados não são válidos', 406, [], $validator->errors()->toArray());
-        } 
+        }  */
 
         $user = User::where('email', $request->email)->first();
 
