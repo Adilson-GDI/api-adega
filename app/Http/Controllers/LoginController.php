@@ -27,9 +27,9 @@ class LoginController extends Controller
 
         $user = User::where('email', $request->email)->first();
 
-        if (!$user || !Hash::check($request->password, $user->password)) {
+        /* if (!$user || !Hash::check($request->password, $user->password)) {
             return $this->response('Credenciais inválidas', 406);
-        }
+        } */
 
         $token = $user->createToken('authToken')->accessToken;
 dd($token);
