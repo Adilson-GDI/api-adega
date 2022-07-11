@@ -16,37 +16,15 @@ use App\Http\Controllers\Controller;
 */
 
 
-Route::group(['middleware'=> ['guest:api']], function () {
-
 Route::get('/', function()
 {
     return "ola";
 });
 
-Route::get('/produto', [App\Http\Controllers\ProdutoController::class, 'list'])->name('list');
+Route::get('/produto/', [App\Http\Controllers\ProdutoController::class, 'list'])->name('list');
 
 Route::post('/login', [App\Http\Controllers\LoginController::class, 'login' ])->name('login');
 
-//Route::get('/cliente', [App\Http\Controllers\ClienteController::class, 'index'])->name('home');
 
-
-
-});//fim grupo.
-
-
-Route::group(['middleware'=>'auth:api'],function(){
-    Route::get('/produto', [App\Http\Controllers\ProdutoController::class, 'list'])->name('list');
-    Route::get('/produto/{id}', [App\Http\Controllers\ProdutoController::class, 'show'])->name('show');
-
-    Route::get('/carrinho', [App\Http\Controllers\CarrinhoController::class, 'list'])->name('list');
-    Route::get('/carrinho/{id}', [App\Http\Controllers\CarrinhoController::class, 'show'])->name('show');
-    Route::post('/carrinho/', [App\Http\Controllers\CarrinhoController::class, 'create'])->name('create');
-    Route::delete('/carrinho/{id}', [App\Http\Controllers\CarrinhoController::class, 'destroy'])->name('destroy');
-});
-
-
-/* Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-}); */
 
 
