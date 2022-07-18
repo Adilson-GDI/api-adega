@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Validator as ValidatorFacade;
 use App\Http\Controllers\Controller;
 
 
-class LoginController extends Controller
+class LoginController extends Controller 
 {
     
     public function login(Request $request)
@@ -21,19 +21,19 @@ class LoginController extends Controller
   
       $validator = $this->validation($request);
 
-       /*  if ($validator->fails()) {
+    /*      if ($validator->fails()) {
             return $this->response('Os dados informados não são válidos', 406, [], $validator->errors()->toArray());
-        }  */
+        }  */ 
 
         $user = User::where('email', $request->email)->first();
 
-        /* if (!$user || !Hash::check($request->password, $user->password)) {
+    /*     if (!$user || !Hash::check($request->password, $user->password)) {
             return $this->response('Credenciais inválidas', 406);
-        } */
-
+        } 
+ */
         $token = $user->createToken('authToken')->accessToken;
-dd($token);
-        //return response()->json(compact('token'));
+
+        return $user;
      
     }
 
