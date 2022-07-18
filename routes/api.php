@@ -21,6 +21,7 @@ Route::get('/', function()
     return "ola";
 });
 
+Route::get('/produtos/', [App\Http\Controllers\ProdutoController::class, 'list'])->name('list');
 Route::get('/produto/', [App\Http\Controllers\ProdutoController::class, 'list'])->name('list');
 
 
