@@ -20,9 +20,9 @@ Route::get('/', function()
 {
     return "ola";
 });
+Route::get('/produtos/search/{id}', [App\Http\Controllers\ProdutoController::class, 'show']);
+Route::get('/produtos/', [App\Http\Controllers\ProdutoController::class, 'list']);
 
-Route::get('/produtos/', [App\Http\Controllers\ProdutoController::class, 'list'])->name('list');
-Route::get('/produtos/{id}', [App\Http\Controllers\ProdutoController::class, 'show'])->name('list');
 
 
 
