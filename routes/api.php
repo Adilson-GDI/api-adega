@@ -20,7 +20,8 @@ Route::get('/{id}', function()
 {
     return "ola";
 });
-Route::get('/produtos/search/{id}', [App\Http\Controllers\ProdutoController::class, 'show']);
+Route::get('/produtos/search/{id}', [App\Http\Controllers\ProdutoController::class, 'show'])->where('id', '[0-9]');
+
 Route::get('/produtos/', [App\Http\Controllers\ProdutoController::class, 'list']);
 
 
