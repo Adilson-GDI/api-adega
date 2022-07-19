@@ -16,7 +16,7 @@ use App\Http\Controllers\Controller;
 */
 
 
-Route::get('/', function()
+Route::get('/{id}', function()
 {
     return "ola";
 });
