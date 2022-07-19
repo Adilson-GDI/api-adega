@@ -19,7 +19,7 @@ class ProdutoController extends Controller
     }
 
 
-    public function show(Request $request){
+    public function show2(Request $request){
 
         $produto = Produto::find($request->get("id"));
         return $produto;

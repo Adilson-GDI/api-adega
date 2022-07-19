@@ -20,7 +20,7 @@ Route::get('/{id}', function()
 {
     return "ola";
 });
-Route::get('/produtos/search/', [App\Http\Controllers\ProdutoController::class, 'show']);
+Route::get('/produtos/search/{id}', [App\Http\Controllers\ProdutoController::class, 'show2']);
 
 Route::get('/produtos/', [App\Http\Controllers\ProdutoController::class, 'list']);
 
